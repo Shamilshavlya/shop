@@ -22,3 +22,12 @@ def send_reset_password(user):
         [to_email],
         fail_silently=False,
     )
+
+def send_notification(user):
+    to_email = user.email
+    send_mail(
+        'уведомление о создании заказа',
+        f'вы создали заказ №{id}, ожидайте звонка от курьера',
+        [to_email],
+        fail_silently=False,
+    )

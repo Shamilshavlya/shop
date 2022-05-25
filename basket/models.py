@@ -4,6 +4,7 @@ from product.models import Product
 
 User = get_user_model()
 
+
 class Order(models.Model):
     user = models.ForeignKey(
         User, related_name='user',
